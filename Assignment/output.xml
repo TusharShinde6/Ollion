@@ -1,0 +1,1363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-02-26T14:05:07.917134" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase" source="/home/tusharshinde/PycharmProjects/Ollion/Assignment/Testcase.robot">
+<test id="s1-t1" name="Open Browse StackOverflow" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:08.405300" level="INFO">Opening browser 'Chrome' to base url 'https://stackoverflow.com/'.</msg>
+<arg>${STACKOVERFLOW_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-26T14:05:08.405054" elapsed="2.206051"/>
+</kw>
+<kw name="Handle Cookie Popup" owner="Keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-26T14:05:13.612417" level="INFO">Slept 3 seconds.</msg>
+<arg>3S</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-26T14:05:10.612063" elapsed="3.000451"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:13.660937" level="INFO">Element 'xpath://*[@id='onetrust-banner-sdk']' is displayed.</msg>
+<arg>xpath://*[@id='onetrust-banner-sdk']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-26T14:05:13.612851" elapsed="0.048180"/>
+</kw>
+<msg time="2024-02-26T14:05:13.661160" level="INFO">${popup} = True</msg>
+<var>${popup}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id='onetrust-banner-sdk']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-02-26T14:05:13.612681" elapsed="0.048499"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:13.661665" level="INFO">Clicking button 'Necessary cookies only'.</msg>
+<arg>Necessary cookies only</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:13.661535" elapsed="0.044789"/>
+</kw>
+<arg>${popup}</arg>
+<arg>Click Button</arg>
+<arg>Necessary cookies only</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-02-26T14:05:13.661333" elapsed="0.045097"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-26T14:05:14.707567" level="INFO">Slept 1 second.</msg>
+<arg>1 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-26T14:05:13.706576" elapsed="1.001642"/>
+</kw>
+<doc>Close the cookie popup if it appears.</doc>
+<status status="PASS" start="2024-02-26T14:05:10.611652" elapsed="4.097039"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-26T14:05:14.713879" elapsed="0.116376"/>
+</kw>
+<doc>Open browser, navigate to StackOverflow.</doc>
+<status status="PASS" start="2024-02-26T14:05:08.404186" elapsed="6.426499"/>
+</test>
+<test id="s1-t2" name="Navigate To Users" line="16">
+<kw name="Browse Users" owner="Keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//a[text()='Questions']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-02-26T14:05:14.832277" elapsed="0.373892"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[text()='Questions']</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-26T14:05:15.206365" elapsed="0.014158"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:15.220911" level="INFO">Clicking element '//a[text()='Questions']'.</msg>
+<arg>//a[text()='Questions']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:15.220720" elapsed="1.053077"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:16.285731" level="INFO">Current page contains text 'All Questions'.</msg>
+<arg>All Questions</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-02-26T14:05:16.273990" elapsed="0.011846"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:16.286265" level="INFO">Clicking element '//*[@id='nav-users']'.</msg>
+<arg>//*[@id='nav-users']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:16.286015" elapsed="0.911450"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:17.212099" level="INFO">Current page contains text 'Users'.</msg>
+<arg>Users</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-02-26T14:05:17.197687" elapsed="0.014540"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-26T14:05:19.212705" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-26T14:05:17.212407" elapsed="2.000397"/>
+</kw>
+<status status="PASS" start="2024-02-26T14:05:14.831840" elapsed="4.381050"/>
+</kw>
+<doc>Navigate to users section.</doc>
+<status status="PASS" start="2024-02-26T14:05:14.831121" elapsed="4.381913"/>
+</test>
+<test id="s1-t3" name="Navigate To Editors" line="20">
+<kw name="Browse Editors" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:19.213883" level="INFO">Clicking element '//a[contains(text(), 'Editors')]'.</msg>
+<arg>//a[contains(text(), 'Editors')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:19.213743" elapsed="6.994868"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-26T14:05:28.209085" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-26T14:05:26.208797" elapsed="2.000407"/>
+</kw>
+<status status="PASS" start="2024-02-26T14:05:19.213523" elapsed="8.995775"/>
+</kw>
+<doc>Navigate to editors section.</doc>
+<status status="PASS" start="2024-02-26T14:05:19.213213" elapsed="8.996284"/>
+</test>
+<test id="s1-t4" name="Get User With Max Edits" line="24">
+<kw name="Pagination on second page" owner="Keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//a[@title='Go to page 2'][1]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-02-26T14:05:28.210310" elapsed="0.278758"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//a[@title='Go to page 2'][1]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-26T14:05:28.489298" elapsed="0.004687"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:28.494310" level="INFO">Clicking element '//a[@title='Go to page 2'][1]'.</msg>
+<arg>//a[@title='Go to page 2'][1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:28.494146" elapsed="8.423342"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-26T14:05:38.918065" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-26T14:05:36.917678" elapsed="2.000508"/>
+</kw>
+<status status="PASS" start="2024-02-26T14:05:28.210065" elapsed="10.708224"/>
+</kw>
+<kw name="Get Element With Maximum Edits" owner="Keywords">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:38.929341" level="INFO">${user_elements} = 15</msg>
+<var>${user_elements}</var>
+<arg>//div[contains(@class, 'user-info')]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.918971" elapsed="0.010406"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-26T14:05:38.930092" level="INFO">${max_user_edit} = </msg>
+<var>${max_user_edit}</var>
+<arg>${EMPTY}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.929667" elapsed="0.000448"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-26T14:05:38.930513" level="INFO">${highest_edits_user} = </msg>
+<var>${highest_edits_user}</var>
+<arg>${EMPTY}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.930220" elapsed="0.000313"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-26T14:05:38.930719" level="INFO">${highest_edit_count} = -1</msg>
+<var>${highest_edit_count}</var>
+<arg>-1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.930625" elapsed="0.000113"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:38.946208" level="INFO">${username} = Gilles Quénot</msg>
+<var>${username}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class="user-details"]//a)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.931106" elapsed="0.015142"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:38.957540" level="INFO">${location} = World Citizen</msg>
+<var>${location}</var>
+<arg>(//div[contains(@class, 'user-info')]//span)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.946416" elapsed="0.011163"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:38.968180" level="INFO">${edits} = 6 edits</msg>
+<var>${edits}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class='user-tags'])[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.957751" elapsed="0.010467"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-02-26T14:05:38.968577" level="INFO">${split_edits} = ['6 edits']</msg>
+<var>${split_edits}</var>
+<arg>${edits}</arg>
+<arg>=</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.968382" elapsed="0.000217"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:38.968847" level="INFO">${edit_count} = 6 edits</msg>
+<var>${edit_count}</var>
+<arg>${split_edits}[0]</arg>
+<arg>0</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.968702" elapsed="0.000164"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:38.969113" level="INFO">${edit_count} = 6</msg>
+<var>${edit_count}</var>
+<arg>${edit_count}</arg>
+<arg>0</arg>
+<arg>-6</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.968959" elapsed="0.000173"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:38.969366" level="INFO">User: Gilles Quénot | Location: World Citizen | Edits: 6 edits</msg>
+<arg>User: ${username} | Location: ${location} | Edits: ${edits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.969227" elapsed="0.000173"/>
+</kw>
+<if>
+<branch type="IF" condition="${edit_count} &gt; ${highest_edit_count}">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-26T14:05:38.969802" level="INFO">${highest_edit_count} = 6</msg>
+<var>${highest_edit_count}</var>
+<arg>${edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.969669" elapsed="0.000153"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-26T14:05:38.970029" level="INFO">${highest_edits_user} = Gilles Quénot</msg>
+<var>${highest_edits_user}</var>
+<arg>${username}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.969914" elapsed="0.000136"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-26T14:05:38.970344" level="INFO">${highest_edits_location} = World Citizen</msg>
+<var>${highest_edits_location}</var>
+<arg>${location}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.970167" elapsed="0.000207"/>
+</kw>
+<status status="PASS" start="2024-02-26T14:05:38.969476" elapsed="0.000956"/>
+</branch>
+<status status="PASS" start="2024-02-26T14:05:38.969457" elapsed="0.001023"/>
+</if>
+<var name="${element}">1</var>
+<status status="PASS" start="2024-02-26T14:05:38.931022" elapsed="0.039487"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:38.994258" level="INFO">${username} = Drew Reese</msg>
+<var>${username}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class="user-details"]//a)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.970867" elapsed="0.023431"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.005202" level="INFO">${location} = 3</msg>
+<var>${location}</var>
+<arg>(//div[contains(@class, 'user-info')]//span)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.994469" elapsed="0.010774"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.015602" level="INFO">${edits} = 6 edits</msg>
+<var>${edits}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class='user-tags'])[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.005417" elapsed="0.010225"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-02-26T14:05:39.016011" level="INFO">${split_edits} = ['6 edits']</msg>
+<var>${split_edits}</var>
+<arg>${edits}</arg>
+<arg>=</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.015811" elapsed="0.000223"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.016284" level="INFO">${edit_count} = 6 edits</msg>
+<var>${edit_count}</var>
+<arg>${split_edits}[0]</arg>
+<arg>0</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.016140" elapsed="0.000163"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.016547" level="INFO">${edit_count} = 6</msg>
+<var>${edit_count}</var>
+<arg>${edit_count}</arg>
+<arg>0</arg>
+<arg>-6</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.016394" elapsed="0.000174"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.016816" level="INFO">User: Drew Reese | Location: 3 | Edits: 6 edits</msg>
+<arg>User: ${username} | Location: ${location} | Edits: ${edits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.016671" elapsed="0.000179"/>
+</kw>
+<if>
+<branch type="IF" condition="${edit_count} &gt; ${highest_edit_count}">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edit_count}</var>
+<arg>${edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.017097" elapsed="0.000022"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_user}</var>
+<arg>${username}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.017202" elapsed="0.000019"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_location}</var>
+<arg>${location}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.017371" elapsed="0.000031"/>
+</kw>
+<status status="NOT RUN" start="2024-02-26T14:05:39.016920" elapsed="0.000527"/>
+</branch>
+<status status="PASS" start="2024-02-26T14:05:39.016902" elapsed="0.000577"/>
+</if>
+<var name="${element}">2</var>
+<status status="PASS" start="2024-02-26T14:05:38.970743" elapsed="0.046756"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.030081" level="INFO">${username} = L Tyrone</msg>
+<var>${username}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class="user-details"]//a)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.017729" elapsed="0.012395"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.041381" level="INFO">${location} = Seattle, WA, USA</msg>
+<var>${location}</var>
+<arg>(//div[contains(@class, 'user-info')]//span)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.030302" elapsed="0.011120"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.052183" level="INFO">${edits} = 6 edits</msg>
+<var>${edits}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class='user-tags'])[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.041596" elapsed="0.010626"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-02-26T14:05:39.052603" level="INFO">${split_edits} = ['6 edits']</msg>
+<var>${split_edits}</var>
+<arg>${edits}</arg>
+<arg>=</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.052395" elapsed="0.000233"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.052887" level="INFO">${edit_count} = 6 edits</msg>
+<var>${edit_count}</var>
+<arg>${split_edits}[0]</arg>
+<arg>0</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.052739" elapsed="0.000167"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.053144" level="INFO">${edit_count} = 6</msg>
+<var>${edit_count}</var>
+<arg>${edit_count}</arg>
+<arg>0</arg>
+<arg>-6</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.052997" elapsed="0.000166"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.053391" level="INFO">User: L Tyrone | Location: Seattle, WA, USA | Edits: 6 edits</msg>
+<arg>User: ${username} | Location: ${location} | Edits: ${edits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.053254" elapsed="0.000168"/>
+</kw>
+<if>
+<branch type="IF" condition="${edit_count} &gt; ${highest_edit_count}">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edit_count}</var>
+<arg>${edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.053666" elapsed="0.000024"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_user}</var>
+<arg>${username}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.053771" elapsed="0.000019"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_location}</var>
+<arg>${location}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.053866" elapsed="0.000019"/>
+</kw>
+<status status="NOT RUN" start="2024-02-26T14:05:39.053488" elapsed="0.000428"/>
+</branch>
+<status status="PASS" start="2024-02-26T14:05:39.053471" elapsed="0.000481"/>
+</if>
+<var name="${element}">3</var>
+<status status="PASS" start="2024-02-26T14:05:39.017651" elapsed="0.036320"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.065236" level="INFO">${username} = greybeard</msg>
+<var>${username}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class="user-details"]//a)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.054203" elapsed="0.011075"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.076634" level="INFO">${location} = 55</msg>
+<var>${location}</var>
+<arg>(//div[contains(@class, 'user-info')]//span)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.065463" elapsed="0.011211"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.087806" level="INFO">${edits} = 6 edits</msg>
+<var>${edits}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class='user-tags'])[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.076845" elapsed="0.011003"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-02-26T14:05:39.088251" level="INFO">${split_edits} = ['6 edits']</msg>
+<var>${split_edits}</var>
+<arg>${edits}</arg>
+<arg>=</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.088025" elapsed="0.000251"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.088544" level="INFO">${edit_count} = 6 edits</msg>
+<var>${edit_count}</var>
+<arg>${split_edits}[0]</arg>
+<arg>0</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.088392" elapsed="0.000172"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.088817" level="INFO">${edit_count} = 6</msg>
+<var>${edit_count}</var>
+<arg>${edit_count}</arg>
+<arg>0</arg>
+<arg>-6</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.088663" elapsed="0.000173"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.089068" level="INFO">User: greybeard | Location: 55 | Edits: 6 edits</msg>
+<arg>User: ${username} | Location: ${location} | Edits: ${edits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.088929" elapsed="0.000172"/>
+</kw>
+<if>
+<branch type="IF" condition="${edit_count} &gt; ${highest_edit_count}">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edit_count}</var>
+<arg>${edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.089341" elapsed="0.000023"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_user}</var>
+<arg>${username}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.089446" elapsed="0.000019"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_location}</var>
+<arg>${location}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.089538" elapsed="0.000017"/>
+</kw>
+<status status="NOT RUN" start="2024-02-26T14:05:39.089168" elapsed="0.000418"/>
+</branch>
+<status status="PASS" start="2024-02-26T14:05:39.089151" elapsed="0.000462"/>
+</if>
+<var name="${element}">4</var>
+<status status="PASS" start="2024-02-26T14:05:39.054128" elapsed="0.035503"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.100862" level="INFO">${username} = Mark Rotteveel</msg>
+<var>${username}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class="user-details"]//a)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.089860" elapsed="0.011092"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.111856" level="INFO">${location} = New Zealand</msg>
+<var>${location}</var>
+<arg>(//div[contains(@class, 'user-info')]//span)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.101146" elapsed="0.010752"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.124668" level="INFO">${edits} = 6 edits</msg>
+<var>${edits}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class='user-tags'])[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.112075" elapsed="0.012640"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-02-26T14:05:39.125121" level="INFO">${split_edits} = ['6 edits']</msg>
+<var>${split_edits}</var>
+<arg>${edits}</arg>
+<arg>=</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.124904" elapsed="0.000240"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.125398" level="INFO">${edit_count} = 6 edits</msg>
+<var>${edit_count}</var>
+<arg>${split_edits}[0]</arg>
+<arg>0</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.125252" elapsed="0.000167"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.125668" level="INFO">${edit_count} = 6</msg>
+<var>${edit_count}</var>
+<arg>${edit_count}</arg>
+<arg>0</arg>
+<arg>-6</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.125511" elapsed="0.000178"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.125929" level="INFO">User: Mark Rotteveel | Location: New Zealand | Edits: 6 edits</msg>
+<arg>User: ${username} | Location: ${location} | Edits: ${edits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.125785" elapsed="0.000184"/>
+</kw>
+<if>
+<branch type="IF" condition="${edit_count} &gt; ${highest_edit_count}">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edit_count}</var>
+<arg>${edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.126215" elapsed="0.000023"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_user}</var>
+<arg>${username}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.126319" elapsed="0.000023"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_location}</var>
+<arg>${location}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.126420" elapsed="0.000018"/>
+</kw>
+<status status="NOT RUN" start="2024-02-26T14:05:39.126040" elapsed="0.000429"/>
+</branch>
+<status status="PASS" start="2024-02-26T14:05:39.126022" elapsed="0.000475"/>
+</if>
+<var name="${element}">5</var>
+<status status="PASS" start="2024-02-26T14:05:39.089785" elapsed="0.036730"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.140339" level="INFO">${username} = mkrieger1</msg>
+<var>${username}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class="user-details"]//a)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.126737" elapsed="0.013643"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.150937" level="INFO">${location} = 45</msg>
+<var>${location}</var>
+<arg>(//div[contains(@class, 'user-info')]//span)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.140555" elapsed="0.010422"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.161692" level="INFO">${edits} = 6 edits</msg>
+<var>${edits}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class='user-tags'])[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.151152" elapsed="0.010579"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-02-26T14:05:39.162107" level="INFO">${split_edits} = ['6 edits']</msg>
+<var>${split_edits}</var>
+<arg>${edits}</arg>
+<arg>=</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.161903" elapsed="0.000225"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.162369" level="INFO">${edit_count} = 6 edits</msg>
+<var>${edit_count}</var>
+<arg>${split_edits}[0]</arg>
+<arg>0</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.162228" elapsed="0.000160"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.162618" level="INFO">${edit_count} = 6</msg>
+<var>${edit_count}</var>
+<arg>${edit_count}</arg>
+<arg>0</arg>
+<arg>-6</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.162475" elapsed="0.000161"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.162905" level="INFO">User: mkrieger1 | Location: 45 | Edits: 6 edits</msg>
+<arg>User: ${username} | Location: ${location} | Edits: ${edits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.162732" elapsed="0.000208"/>
+</kw>
+<if>
+<branch type="IF" condition="${edit_count} &gt; ${highest_edit_count}">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edit_count}</var>
+<arg>${edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.163178" elapsed="0.000021"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_user}</var>
+<arg>${username}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.163276" elapsed="0.000026"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_location}</var>
+<arg>${location}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.163377" elapsed="0.000018"/>
+</kw>
+<status status="NOT RUN" start="2024-02-26T14:05:39.163010" elapsed="0.000417"/>
+</branch>
+<status status="PASS" start="2024-02-26T14:05:39.162993" elapsed="0.000461"/>
+</if>
+<var name="${element}">6</var>
+<status status="PASS" start="2024-02-26T14:05:39.126663" elapsed="0.036808"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.175686" level="INFO">${username} = starball</msg>
+<var>${username}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class="user-details"]//a)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.163697" elapsed="0.012030"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.186691" level="INFO">${location} = EU</msg>
+<var>${location}</var>
+<arg>(//div[contains(@class, 'user-info')]//span)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.175903" elapsed="0.010828"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.198037" level="INFO">${edits} = 6 edits</msg>
+<var>${edits}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class='user-tags'])[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.186934" elapsed="0.011143"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-02-26T14:05:39.198446" level="INFO">${split_edits} = ['6 edits']</msg>
+<var>${split_edits}</var>
+<arg>${edits}</arg>
+<arg>=</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.198248" elapsed="0.000220"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.198709" level="INFO">${edit_count} = 6 edits</msg>
+<var>${edit_count}</var>
+<arg>${split_edits}[0]</arg>
+<arg>0</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.198569" elapsed="0.000160"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.198964" level="INFO">${edit_count} = 6</msg>
+<var>${edit_count}</var>
+<arg>${edit_count}</arg>
+<arg>0</arg>
+<arg>-6</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.198818" elapsed="0.000165"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.199209" level="INFO">User: starball | Location: EU | Edits: 6 edits</msg>
+<arg>User: ${username} | Location: ${location} | Edits: ${edits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.199074" elapsed="0.000168"/>
+</kw>
+<if>
+<branch type="IF" condition="${edit_count} &gt; ${highest_edit_count}">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edit_count}</var>
+<arg>${edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.199493" elapsed="0.000022"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_user}</var>
+<arg>${username}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.199594" elapsed="0.000018"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_location}</var>
+<arg>${location}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.199684" elapsed="0.000018"/>
+</kw>
+<status status="NOT RUN" start="2024-02-26T14:05:39.199320" elapsed="0.000413"/>
+</branch>
+<status status="PASS" start="2024-02-26T14:05:39.199291" elapsed="0.000470"/>
+</if>
+<var name="${element}">7</var>
+<status status="PASS" start="2024-02-26T14:05:39.163625" elapsed="0.036153"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.210597" level="INFO">${username} = Daniel Mann</msg>
+<var>${username}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class="user-details"]//a)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.200008" elapsed="0.010632"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.221091" level="INFO">${location} = 0</msg>
+<var>${location}</var>
+<arg>(//div[contains(@class, 'user-info')]//span)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.210813" elapsed="0.010341"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.231761" level="INFO">${edits} = 5 edits</msg>
+<var>${edits}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class='user-tags'])[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.221426" elapsed="0.010375"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-02-26T14:05:39.232164" level="INFO">${split_edits} = ['5 edits']</msg>
+<var>${split_edits}</var>
+<arg>${edits}</arg>
+<arg>=</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.231968" elapsed="0.000218"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.232424" level="INFO">${edit_count} = 5 edits</msg>
+<var>${edit_count}</var>
+<arg>${split_edits}[0]</arg>
+<arg>0</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.232284" elapsed="0.000159"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.232685" level="INFO">${edit_count} = 5</msg>
+<var>${edit_count}</var>
+<arg>${edit_count}</arg>
+<arg>0</arg>
+<arg>-6</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.232530" elapsed="0.000176"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.233053" level="INFO">User: Daniel Mann | Location: 0 | Edits: 5 edits</msg>
+<arg>User: ${username} | Location: ${location} | Edits: ${edits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.232800" elapsed="0.000290"/>
+</kw>
+<if>
+<branch type="IF" condition="${edit_count} &gt; ${highest_edit_count}">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edit_count}</var>
+<arg>${edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.233338" elapsed="0.000023"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_user}</var>
+<arg>${username}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.233443" elapsed="0.000020"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_location}</var>
+<arg>${location}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.233538" elapsed="0.000022"/>
+</kw>
+<status status="NOT RUN" start="2024-02-26T14:05:39.233160" elapsed="0.000431"/>
+</branch>
+<status status="PASS" start="2024-02-26T14:05:39.233145" elapsed="0.000475"/>
+</if>
+<var name="${element}">8</var>
+<status status="PASS" start="2024-02-26T14:05:39.199931" elapsed="0.033706"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.244954" level="INFO">${username} = InSync</msg>
+<var>${username}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class="user-details"]//a)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.233862" elapsed="0.011131"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.255937" level="INFO">${location} = Delft, The Netherlands</msg>
+<var>${location}</var>
+<arg>(//div[contains(@class, 'user-info')]//span)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.245171" elapsed="0.010807"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.266709" level="INFO">${edits} = 5 edits</msg>
+<var>${edits}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class='user-tags'])[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.256153" elapsed="0.010598"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-02-26T14:05:39.267142" level="INFO">${split_edits} = ['5 edits']</msg>
+<var>${split_edits}</var>
+<arg>${edits}</arg>
+<arg>=</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.266935" elapsed="0.000229"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.267513" level="INFO">${edit_count} = 5 edits</msg>
+<var>${edit_count}</var>
+<arg>${split_edits}[0]</arg>
+<arg>0</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.267265" elapsed="0.000270"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.267802" level="INFO">${edit_count} = 5</msg>
+<var>${edit_count}</var>
+<arg>${edit_count}</arg>
+<arg>0</arg>
+<arg>-6</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.267645" elapsed="0.000177"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.268068" level="INFO">User: InSync | Location: Delft, The Netherlands | Edits: 5 edits</msg>
+<arg>User: ${username} | Location: ${location} | Edits: ${edits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.267925" elapsed="0.000178"/>
+</kw>
+<if>
+<branch type="IF" condition="${edit_count} &gt; ${highest_edit_count}">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edit_count}</var>
+<arg>${edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.268354" elapsed="0.000023"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_user}</var>
+<arg>${username}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.268460" elapsed="0.000019"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_location}</var>
+<arg>${location}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.268553" elapsed="0.000018"/>
+</kw>
+<status status="NOT RUN" start="2024-02-26T14:05:39.268176" elapsed="0.000425"/>
+</branch>
+<status status="PASS" start="2024-02-26T14:05:39.268157" elapsed="0.000473"/>
+</if>
+<var name="${element}">9</var>
+<status status="PASS" start="2024-02-26T14:05:39.233788" elapsed="0.034860"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.279849" level="INFO">${username} = GSerg</msg>
+<var>${username}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class="user-details"]//a)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.268865" elapsed="0.011024"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.290897" level="INFO">${location} = 0</msg>
+<var>${location}</var>
+<arg>(//div[contains(@class, 'user-info')]//span)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.280062" elapsed="0.010874"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.301344" level="INFO">${edits} = 5 edits</msg>
+<var>${edits}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class='user-tags'])[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.291100" elapsed="0.010282"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-02-26T14:05:39.301741" level="INFO">${split_edits} = ['5 edits']</msg>
+<var>${split_edits}</var>
+<arg>${edits}</arg>
+<arg>=</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.301548" elapsed="0.000215"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.302005" level="INFO">${edit_count} = 5 edits</msg>
+<var>${edit_count}</var>
+<arg>${split_edits}[0]</arg>
+<arg>0</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.301865" elapsed="0.000158"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.302254" level="INFO">${edit_count} = 5</msg>
+<var>${edit_count}</var>
+<arg>${edit_count}</arg>
+<arg>0</arg>
+<arg>-6</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.302110" elapsed="0.000163"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.302504" level="INFO">User: GSerg | Location: 0 | Edits: 5 edits</msg>
+<arg>User: ${username} | Location: ${location} | Edits: ${edits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.302366" elapsed="0.000170"/>
+</kw>
+<if>
+<branch type="IF" condition="${edit_count} &gt; ${highest_edit_count}">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edit_count}</var>
+<arg>${edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.302770" elapsed="0.000022"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_user}</var>
+<arg>${username}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.302871" elapsed="0.000019"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_location}</var>
+<arg>${location}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.302963" elapsed="0.000019"/>
+</kw>
+<status status="NOT RUN" start="2024-02-26T14:05:39.302603" elapsed="0.000421"/>
+</branch>
+<status status="PASS" start="2024-02-26T14:05:39.302587" elapsed="0.000477"/>
+</if>
+<var name="${element}">10</var>
+<status status="PASS" start="2024-02-26T14:05:39.268793" elapsed="0.034297"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.315178" level="INFO">${username} = SpicyCatGames</msg>
+<var>${username}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class="user-details"]//a)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.303460" elapsed="0.011759"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.326066" level="INFO">${location} = Germany</msg>
+<var>${location}</var>
+<arg>(//div[contains(@class, 'user-info')]//span)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.315401" elapsed="0.010705"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.336764" level="INFO">${edits} = 5 edits</msg>
+<var>${edits}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class='user-tags'])[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.326275" elapsed="0.010549"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-02-26T14:05:39.337378" level="INFO">${split_edits} = ['5 edits']</msg>
+<var>${split_edits}</var>
+<arg>${edits}</arg>
+<arg>=</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.337074" elapsed="0.000340"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.337818" level="INFO">${edit_count} = 5 edits</msg>
+<var>${edit_count}</var>
+<arg>${split_edits}[0]</arg>
+<arg>0</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.337579" elapsed="0.000273"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.338183" level="INFO">${edit_count} = 5</msg>
+<var>${edit_count}</var>
+<arg>${edit_count}</arg>
+<arg>0</arg>
+<arg>-6</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.337995" elapsed="0.000208"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.338454" level="INFO">User: SpicyCatGames | Location: Germany | Edits: 5 edits</msg>
+<arg>User: ${username} | Location: ${location} | Edits: ${edits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.338302" elapsed="0.000240"/>
+</kw>
+<if>
+<branch type="IF" condition="${edit_count} &gt; ${highest_edit_count}">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edit_count}</var>
+<arg>${edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.338795" elapsed="0.000021"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_user}</var>
+<arg>${username}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.338897" elapsed="0.000019"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_location}</var>
+<arg>${location}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.338992" elapsed="0.000018"/>
+</kw>
+<status status="NOT RUN" start="2024-02-26T14:05:39.338618" elapsed="0.000423"/>
+</branch>
+<status status="PASS" start="2024-02-26T14:05:39.338599" elapsed="0.000471"/>
+</if>
+<var name="${element}">11</var>
+<status status="PASS" start="2024-02-26T14:05:39.303328" elapsed="0.035760"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.349830" level="INFO">${username} = Sep Roland</msg>
+<var>${username}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class="user-details"]//a)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.339324" elapsed="0.010542"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.360667" level="INFO">${location} = 10</msg>
+<var>${location}</var>
+<arg>(//div[contains(@class, 'user-info')]//span)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.350028" elapsed="0.010680"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.371433" level="INFO">${edits} = 5 edits</msg>
+<var>${edits}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class='user-tags'])[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.360885" elapsed="0.010593"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-02-26T14:05:39.371858" level="INFO">${split_edits} = ['5 edits']</msg>
+<var>${split_edits}</var>
+<arg>${edits}</arg>
+<arg>=</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.371654" elapsed="0.000225"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.372123" level="INFO">${edit_count} = 5 edits</msg>
+<var>${edit_count}</var>
+<arg>${split_edits}[0]</arg>
+<arg>0</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.371980" elapsed="0.000162"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.372380" level="INFO">${edit_count} = 5</msg>
+<var>${edit_count}</var>
+<arg>${edit_count}</arg>
+<arg>0</arg>
+<arg>-6</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.372231" elapsed="0.000168"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.372629" level="INFO">User: Sep Roland | Location: 10 | Edits: 5 edits</msg>
+<arg>User: ${username} | Location: ${location} | Edits: ${edits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.372489" elapsed="0.000172"/>
+</kw>
+<if>
+<branch type="IF" condition="${edit_count} &gt; ${highest_edit_count}">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edit_count}</var>
+<arg>${edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.372893" elapsed="0.000021"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_user}</var>
+<arg>${username}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.372992" elapsed="0.000018"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_location}</var>
+<arg>${location}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.373082" elapsed="0.000017"/>
+</kw>
+<status status="NOT RUN" start="2024-02-26T14:05:39.372728" elapsed="0.000402"/>
+</branch>
+<status status="PASS" start="2024-02-26T14:05:39.372711" elapsed="0.000446"/>
+</if>
+<var name="${element}">12</var>
+<status status="PASS" start="2024-02-26T14:05:39.339239" elapsed="0.033935"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.384056" level="INFO">${username} = Remy Lebeau</msg>
+<var>${username}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class="user-details"]//a)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.373396" elapsed="0.010701"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.394858" level="INFO">${location} = </msg>
+<var>${location}</var>
+<arg>(//div[contains(@class, 'user-info')]//span)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.384269" elapsed="0.010627"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.405384" level="INFO">${edits} = 5 edits</msg>
+<var>${edits}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class='user-tags'])[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.395065" elapsed="0.010360"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-02-26T14:05:39.405803" level="INFO">${split_edits} = ['5 edits']</msg>
+<var>${split_edits}</var>
+<arg>${edits}</arg>
+<arg>=</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.405597" elapsed="0.000228"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.406082" level="INFO">${edit_count} = 5 edits</msg>
+<var>${edit_count}</var>
+<arg>${split_edits}[0]</arg>
+<arg>0</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.405925" elapsed="0.000177"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.406345" level="INFO">${edit_count} = 5</msg>
+<var>${edit_count}</var>
+<arg>${edit_count}</arg>
+<arg>0</arg>
+<arg>-6</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.406193" elapsed="0.000172"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.406604" level="INFO">User: Remy Lebeau | Location:  | Edits: 5 edits</msg>
+<arg>User: ${username} | Location: ${location} | Edits: ${edits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.406460" elapsed="0.000179"/>
+</kw>
+<if>
+<branch type="IF" condition="${edit_count} &gt; ${highest_edit_count}">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edit_count}</var>
+<arg>${edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.406886" elapsed="0.000022"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_user}</var>
+<arg>${username}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.406990" elapsed="0.000018"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_location}</var>
+<arg>${location}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.407137" elapsed="0.000020"/>
+</kw>
+<status status="NOT RUN" start="2024-02-26T14:05:39.406711" elapsed="0.000479"/>
+</branch>
+<status status="PASS" start="2024-02-26T14:05:39.406692" elapsed="0.000527"/>
+</if>
+<var name="${element}">13</var>
+<status status="PASS" start="2024-02-26T14:05:39.373320" elapsed="0.033917"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.417901" level="INFO">${username} = soundflix</msg>
+<var>${username}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class="user-details"]//a)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.407510" elapsed="0.010429"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.428703" level="INFO">${location} = 80</msg>
+<var>${location}</var>
+<arg>(//div[contains(@class, 'user-info')]//span)[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.418107" elapsed="0.010635"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:05:39.439562" level="INFO">${edits} = 5 edits</msg>
+<var>${edits}</var>
+<arg>(//div[contains(@class, 'user-info')]//*[@class='user-tags'])[${element}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.428917" elapsed="0.010685"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-02-26T14:05:39.439981" level="INFO">${split_edits} = ['5 edits']</msg>
+<var>${split_edits}</var>
+<arg>${edits}</arg>
+<arg>=</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.439776" elapsed="0.000225"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.440242" level="INFO">${edit_count} = 5 edits</msg>
+<var>${edit_count}</var>
+<arg>${split_edits}[0]</arg>
+<arg>0</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.440103" elapsed="0.000159"/>
+</kw>
+<kw name="Get Substring" owner="String">
+<msg time="2024-02-26T14:05:39.440498" level="INFO">${edit_count} = 5</msg>
+<var>${edit_count}</var>
+<arg>${edit_count}</arg>
+<arg>0</arg>
+<arg>-6</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.440347" elapsed="0.000170"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.440739" level="INFO">User: soundflix | Location: 80 | Edits: 5 edits</msg>
+<arg>User: ${username} | Location: ${location} | Edits: ${edits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.440605" elapsed="0.000165"/>
+</kw>
+<if>
+<branch type="IF" condition="${edit_count} &gt; ${highest_edit_count}">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edit_count}</var>
+<arg>${edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.441001" elapsed="0.000022"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_user}</var>
+<arg>${username}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.441100" elapsed="0.000019"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${highest_edits_location}</var>
+<arg>${location}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-02-26T14:05:39.441192" elapsed="0.000018"/>
+</kw>
+<status status="NOT RUN" start="2024-02-26T14:05:39.440835" elapsed="0.000405"/>
+</branch>
+<status status="PASS" start="2024-02-26T14:05:39.440819" elapsed="0.000448"/>
+</if>
+<var name="${element}">14</var>
+<status status="PASS" start="2024-02-26T14:05:39.407429" elapsed="0.033855"/>
+</iter>
+<var>${element}</var>
+<value>1</value>
+<value>${user_elements }</value>
+<status status="PASS" start="2024-02-26T14:05:38.930803" elapsed="0.510517"/>
+</for>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.441561" level="INFO">${result} = Highest edits user: Gilles Quénot with 6 edits</msg>
+<var>${result}</var>
+<arg>Highest edits user: ${highest_edits_user} with ${highest_edit_count} edits</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.441407" elapsed="0.000175"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.441824" level="INFO">${data_result} = User: Gilles Quénot | Location: World Citizen | Edits: 6</msg>
+<var>${data_result}</var>
+<arg>User: ${highest_edits_user} | Location: ${highest_edits_location} | Edits: ${highest_edit_count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.441669" elapsed="0.000174"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.442030" level="INFO">Highest edits user: Gilles Quénot with 6 edits</msg>
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.441932" elapsed="0.000135"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:05:39.442238" level="INFO">User: Gilles Quénot | Location: World Citizen | Edits: 6</msg>
+<arg>${data_result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.442149" elapsed="0.000122"/>
+</kw>
+<doc>Get user with max edits on the page and return user info.</doc>
+<status status="PASS" start="2024-02-26T14:05:38.918683" elapsed="0.523642"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-26T14:05:39.442459" elapsed="0.065199"/>
+</kw>
+<doc>Get the user with the maximum number of edits on the second page.</doc>
+<status status="PASS" start="2024-02-26T14:05:28.209702" elapsed="11.298202"/>
+</test>
+<status status="PASS" start="2024-02-26T14:05:07.918020" elapsed="31.590262"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Testcase">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
